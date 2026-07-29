@@ -1,6 +1,6 @@
 # Versão — Marthina Learning
 
-**Versão atual:** `0.1.3`
+**Versão atual:** `0.1.4`
 
 > Esta versão é a fonte da verdade do projeto e é lida em runtime via
 > `config('app.version')` — a aplicação extrai o **primeiro número semver
@@ -56,6 +56,13 @@ entrega). Commits adicionais da mesma entrega repetem a versão sem novo bump.
 
 > Ordem decrescente (mais recente no topo). Cada entrada lista as mudanças e os
 > gatilhos que justificaram o bump.
+
+### `0.1.4` — 2026-07-29 — Adota o COMMITTER: marcador de opt-in para o ciclo automático de commit
+
+- `.committer.yml` na raiz — opt-in explícito (sem marcador o repo não existe para
+  a skill). `branch_only: master` limita o ciclo à branch de trabalho.
+- A varredura é do `~/x/GIT/run.sh` (cron de 30 min), que descobre os
+  participantes pelo marcador em vez de lista fixa de caminhos.
 
 ### `0.1.3` — 2026-07-06 — Rate limiting nas rotas de autenticação
 
