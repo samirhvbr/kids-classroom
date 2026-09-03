@@ -1,6 +1,6 @@
 # Versão — Marthina Learning
 
-**Versão atual:** `0.1.4`
+**Versão atual:** `0.1.5`
 
 > Esta versão é a fonte da verdade do projeto e é lida em runtime via
 > `config('app.version')` — a aplicação extrai o **primeiro número semver
@@ -56,6 +56,20 @@ entrega). Commits adicionais da mesma entrega repetem a versão sem novo bump.
 
 > Ordem decrescente (mais recente no topo). Cada entrada lista as mudanças e os
 > gatilhos que justificaram o bump.
+
+### `0.1.5` — 2026-09-02 — Releases automaticas: o version.md da master vira tag e Release
+
+O GitHub nao deduz versao de mensagem de commit: sem tag, o numero e string no
+`git log` e `git diff` entre versoes nao existe. Entram o
+`.github/workflows/release.yml` e o `tools/release.sh`.
+
+**A regra:** o `version.md` da branch padrao **no GitHub** e o que as Releases
+**no GitHub** refletem. Checkout local nao entra na conta. Um PR nao publica
+nada; no merge, o push do `version.md` dispara o workflow e a Release vira
+aquela versao.
+
+Tag e titulo = a versao pura, sem prefixo `v`. Norma:
+[samirhvbr/repodocs](https://github.com/samirhvbr/repodocs/blob/master/docs/versioning.md).
 
 ### `0.1.4` — 2026-07-29 — Adota o COMMITTER: marcador de opt-in para o ciclo automático de commit
 
