@@ -1,6 +1,6 @@
 # Versão — Marthina Learning
 
-**Versão atual:** `0.1.14`
+**Versão atual:** `0.1.15`
 
 > Esta versão é a fonte da verdade do projeto e é lida em runtime via
 > `config('app.version')` — a aplicação extrai o **primeiro número semver

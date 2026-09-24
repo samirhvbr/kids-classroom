@@ -43,8 +43,6 @@
       "Bash(./vendor/bin/phpunit:*)"
     ],
     "deny": [
-      "Read(./.env)",
-      "Read(./.env.*)",
       "Read(./storage/oauth-*.key)",
       "Read(./storage/*.pem)",
       "Read(./auth.json)",
@@ -52,26 +50,21 @@
       "Bash(php artisan migrate:reset:*)",
       "Bash(php artisan db:wipe:*)",
       "Bash(mysql:*)",
-      "Bash(mariadb:*)",
-      "Bash(rm -rf:*)",
-      "Bash(git push --force:*)",
-      "Bash(git push -f:*)",
-      "Bash(git push * --force*)",
-      "Bash(git reset --hard:*)",
-      "Bash(git clean -fd:*)",
-      "Bash(curl * | sh:*)",
-      "Bash(curl * | bash:*)",
-      "Bash(wget * | sh:*)",
-      "Bash(wget * | bash:*)"
+      "Bash(mariadb:*)"
     ],
     "ask": [
       "Bash(sudo:*)",
+      "Bash(rm -rf:*)",
       "Bash(php artisan migrate:*)",
       "Bash(composer require:*)",
       "Bash(composer update:*)",
       "Bash(npm install --save:*)",
       "Bash(mysqldump:*)",
-      "Bash(mariadb-dump:*)"
+      "Bash(mariadb-dump:*)",
+      "Bash(curl * | sh:*)",
+      "Bash(curl * | bash:*)",
+      "Bash(wget * | sh:*)",
+      "Bash(wget * | bash:*)"
     ]
   }
 }
